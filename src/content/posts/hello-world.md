@@ -9,4 +9,4 @@ tags: [hello]
 
 これは最初のブログ記事です。
 
-Lume と Deno で構築されたブログへようこそ!
+Astro と Node.js で構築されたブログへようこそ!

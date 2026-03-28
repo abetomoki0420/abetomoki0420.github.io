@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Base title="Blog - My Blog">
+  <h1>Blog</h1>
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <time datetime={post.data.date.toISOString().slice(0, 10)}>
+          {post.data.date.toISOString().slice(0, 10)}
+        </time>
+        {" - "}
+        <a href={`/posts/${post.id.replace(/\.md$/, "")}/`}>{post.data.title}</a>
+      </li>
+    ))}
+  </ul>
+</Base>
