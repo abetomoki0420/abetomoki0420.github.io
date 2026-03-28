@@ -1,0 +1,14 @@
+lang: ja
+
+home:
+  welcome: ブログへようこそ。
+
+menu_links:
+  - text: Blog
+    href: /blog/
+
+metas:
+  site: "My Blog"
+  description: "=description || My Blog"
+  title: "=title"
+  lang: ja
